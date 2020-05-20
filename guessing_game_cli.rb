@@ -5,6 +5,15 @@ def run_guessing_game
   loop do
     puts "Please enter a number 1-6"
     guess=gets.chomp
-    
+    if guess=="exit"
+      puts "Goodbye!"
+      break
+    elsif guess.to_i==the_number
+      puts "You guessed the correct number!"
+      break
+    else
+      puts "Sorry! The computer guessed #{the_number}"
+      break
+    end
   end
 end
